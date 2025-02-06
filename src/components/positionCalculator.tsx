@@ -3,7 +3,7 @@ import { createSignal, createMemo } from "solid-js";
 function LabeledInput(props: any) {
   return (
     <div class="mb-4">
-      <label for={props.id} class="block mb-1 text-sm font-medium text-gray-700">
+      <label for={props.id} class="block mb-1 text-sm font-medium text-gray-300">
         {props.label}
       </label>
       <input
@@ -12,7 +12,7 @@ function LabeledInput(props: any) {
         step={props.step}
         value={props.value()}
         onInput={(e) => props.onChange(parseFloat(e.target.value))}
-        class="w-full border border-gray-300 rounded-md px-3 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        class="w-full border border-gray-600 bg-gray-800 rounded-md px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition ease-in-out duration-200"
       />
     </div>
   );
@@ -20,8 +20,8 @@ function LabeledInput(props: any) {
 
 function OutputField(props: any) {
   return (
-    <p class="text-lg font-medium text-gray-800 my-2">
-      {props.label}: <span class="font-semibold">{props.value.toFixed(2)}</span>
+    <p class="text-lg font-mono font-medium text-gray-300 my-2">
+      {props.label}: <span class="font-semibold text-blue-400">{props.value.toFixed(2)}</span>
     </p>
   );
 }
@@ -44,8 +44,8 @@ function PositionCalculator() {
   });
 
   return (
-    <div class="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h1 class="text-2xl font-bold text-gray-900 mb-4">Position Calculator</h1>
+    <div class="max-w-sm mx-auto p-6 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg shadow-xl border border-gray-700">
+      <h1 class="text-3xl font-bold text-blue-400 mb-4 text-center">Position Calculator</h1>
       <form>
         <LabeledInput
           id="balance"
@@ -74,8 +74,8 @@ function PositionCalculator() {
           onChange={setGbpUsdExchangeRate}
         />
       </form>
-      <hr class="my-6 border-gray-300" />
-      <h2 class="text-xl font-semibold text-gray-800 mb-4">Calculation Results</h2>
+      <hr class="my-6 border-gray-600" />
+      <h2 class="text-2xl font-semibold text-gray-300 mb-4 text-center">Calculation Results</h2>
       <OutputField label="Risk Amount (£)" value={calculations().riskAmt} />
       <OutputField label="Risk in USD" value={calculations().riskUSD} />
       <OutputField label="Value Per Pip (USD)" value={calculations().pipValue} />
