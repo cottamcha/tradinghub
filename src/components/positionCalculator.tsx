@@ -47,7 +47,7 @@ function PositionCalculator() {
   });
 
   return (
-    <div class="max-w-sm mx-auto p-6 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg shadow-xl border border-gray-700">
+    <div class="max-w-sm m-auto mb-10 p-10 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg shadow-xl border border-gray-700">
       <h1 class="text-3xl font-bold text-blue-400 mb-4 text-center">Position Calculator</h1>
       <form>
         <LabeledInput

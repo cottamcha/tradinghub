@@ -7,10 +7,10 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1 class="text-center text-3xl font-bold text-white my-5">
+  <h1 class="text-3xl font-bold text-white p-5 text-center lg:text-start">
     Cotties Trade Hub 📈
   </h1>
-  <div class="">
+  <div class="mt-10 grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-1">
     <PositionCalculator client:load />
   </div>
 </Layout>
