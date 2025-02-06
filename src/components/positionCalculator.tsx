@@ -24,7 +24,7 @@ function LabeledInput(props: any) {
 function OutputField(props: any) {
   return (
     <p class="text-lg font-mono font-medium text-gray-300 my-2">
-      {props.label}: <span class="font-semibold text-blue-400">{props.value.toFixed(2)}</span>
+      {props.label}: <span class="font-semibold text-blue-400">{props.value.toFixed(2)}{props.lots && " lots"}</span>
     </p>
   );
 }
@@ -82,7 +82,7 @@ function PositionCalculator() {
       <OutputField label="Risk Amount (£)" value={calculations().riskAmt} />
       <OutputField label="Risk in USD" value={calculations().riskUSD} />
       <OutputField label="Value Per Pip (USD)" value={calculations().pipValue} />
-      <OutputField label="Position Size" value={calculations().posSize} />
+      <OutputField label="Position Size" value={calculations().posSize} lots={true} />
     </div>
   );
 }

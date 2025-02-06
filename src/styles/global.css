@@ -1,15 +1,35 @@
 @import "tailwindcss";
 
-html {
-  background: #4776e6; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #8e54e9,
-    #4776e6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #8e54e9,
-    #4776e6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* Ensure the page takes up full height */
+/* Main gradient background for depth */
+body {
+  font-family: "Sora Variable", sans-serif;
+  background: linear-gradient(135deg, #081229, #0d1b2a, #415a77, #778da9);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay grid pattern using pseudo-element */
+body::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 49px,
+      rgba(255, 255, 255, 0.1) 50px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 49px,
+      rgba(255, 255, 255, 0.1) 50px
+    );
+  pointer-events: none;
+  z-index: 0;
 }

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/solid-js": "^5.0.4",
+    "@fontsource-variable/sora": "^5.1.1",
     "@tailwindcss/vite": "^4.0.3",
     "astro": "^5.2.5",
     "solid-js": "^1.9.4",
