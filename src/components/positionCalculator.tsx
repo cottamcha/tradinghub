@@ -11,7 +11,10 @@ function LabeledInput(props: any) {
         type={props.type || "text"}
         step={props.step}
         value={props.value()}
-        onInput={(e) => props.onChange(parseFloat(e.target.value))}
+        onInput={(e) => {
+            const parsed = parseFloat(e.target.value);
+            props.onChange(isNaN(parsed) ? 0 : parsed);
+          }}
         class="w-full border border-gray-600 bg-gray-800 rounded-md px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 transition ease-in-out duration-200"
       />
     </div>
