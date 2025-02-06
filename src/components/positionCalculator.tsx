@@ -46,7 +46,7 @@ function PositionCalculator() {
     <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-pink-500 to-yellow-400 p-4">
       {/* Wrap the card in a container with perspective for a subtle 3D effect */}
       <div style={{ perspective: "1000px" }}>
-        <div class="w-full max-w-lg p-8 bg-black bg-opacity-80 rounded-lg shadow-2xl transform transition duration-700 hover:scale-105">
+        <div class="w-full max-w-lg p-8 bg-black bg-opacity-80 rounded-lg shadow-2xl">
           <h1 class="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-300">
             Position Calculator
           </h1>
